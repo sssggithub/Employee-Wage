@@ -2,14 +2,19 @@ package EmpWage;
 
 public class Employee_wage {
 	 int Fulltime =1;
-      double empcheck =Math.floor(Math.random()*10)%2;
+	 int wageperhr=20;
+      double empcheck =(int)(Math.random()*2);
+      int emphrs;
+      int empwage;
    public void Check_Emp_Is_PresentorAbsent() {
 	   if (empcheck==Fulltime) {
-		 	  System.out.println("Employee is present");
+		 	  emphrs=8;
 		   }
 		 	  else {
-		 		  System.out.println("Employee is absent");
+		 		  emphrs=0;
 		 	  }
+	   empwage = emphrs*wageperhr;
+	   System.out.println("Daily Employee Wages:"+empwage);
    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
