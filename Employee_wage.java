@@ -2,15 +2,19 @@ package EmpWage;
 
 public class Employee_wage {
 	 int Fulltime =1;
+	 int Parttime=2;
 	 int wageperhr=20;
-      double empcheck =(int)(Math.random()*2);
+      double empcheck =(int)(Math.random()*3);
       int fulldayhr;
       int empwage;
    public void Check_Emp_Is_PresentorAbsent() {
 	   if (empcheck==Fulltime) {
 	    	  System.out.println("Employee is present");
 	      }
-	    	  else {
+	   else if(empcheck==Parttime){
+		   System.out.println("Employee is present for Half Time");
+	   }
+	   else {
 	    		  System.out.println("Employee is absent");
 	    	  }
    }
@@ -19,7 +23,11 @@ public class Employee_wage {
 		    fulldayhr=8;
 		 	 System.out.println("Employee Hour:"+ fulldayhr);
 		   }
-	 
+	   else if(empcheck==Parttime){
+			fulldayhr=4;
+			System.out.println("Employee Hour:"+ fulldayhr);
+		}
+	    	 
 		 	  else {
 		 		  fulldayhr=0;
 		 		 System.out.println("Employee Hour:"+ fulldayhr);
