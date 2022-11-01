@@ -1,8 +1,8 @@
 package EmpWage;
 
 public class Employee_wage {
-	 int Fulltime =1;
-	 int Parttime=2;
+	static final int Fulltime =1;
+	static final int Parttime=2;
 	 int wageperhr=20;
       double empcheck =(int)(Math.random()*3);
       int fulldayhr;
@@ -35,12 +35,29 @@ public class Employee_wage {
 	   empwage = fulldayhr*wageperhr;
 	   System.out.println("Daily Employee Wages:"+empwage);
    }
+   public void usingswitchcase() {
+	   switch((int)empcheck) {
+		case Fulltime :
+	    	  fulldayhr=8;
+	      break;
+		case Parttime:
+			fulldayhr=4;
+		break;
+	    	  default:
+	    		  fulldayhr=0;
+	    	  }
+		empwage = fulldayhr*wageperhr;
+		System.out.println("Emp wage: "+empwage);
+   }
+  
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 System.out.println("Welcome to Employee Wage Computation Program");
 Employee_wage emp=new Employee_wage();
 emp.Check_Emp_Is_PresentorAbsent() ;
 emp.Daily_Emp_Wage();
+emp.usingswitchcase();
+
 	}
 }
 
