@@ -1,8 +1,8 @@
 package EmpWage;
 
 public class Employee_wage {
-	 static int Fulltime =1;
-     static double empcheck =Math.floor(Math.random()*10)%2;
+	 int Fulltime =1;
+      double empcheck =Math.floor(Math.random()*10)%2;
    public void Check_Emp_Is_PresentorAbsent() {
 	   if (empcheck==Fulltime) {
 		 	  System.out.println("Employee is present");
