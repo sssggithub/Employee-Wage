@@ -2,10 +2,9 @@ package EmpWage;
 
 public class Employee_wage {
 	 int Fulltime =1;
-	 int parttime=2;
 	 int wageperhr=20;
-      double empcheck =(int)(Math.random()*3);
-      int emphrs;
+      double empcheck =(int)(Math.random()*2);
+      int fulldayhr;
       int empwage;
    public void Check_Emp_Is_PresentorAbsent() {
 	   if (empcheck==Fulltime) {
@@ -17,15 +16,15 @@ public class Employee_wage {
    }
    public void Daily_Emp_Wage() {
 	   if (empcheck==Fulltime) {
-		 	  emphrs=8;
-		 	 System.out.println("Employee Hour:"+emphrs);
+		    fulldayhr=8;
+		 	 System.out.println("Employee Hour:"+ fulldayhr);
 		   }
 	 
 		 	  else {
-		 		  emphrs=0;
-		 		 System.out.println("Employee Hour:"+emphrs);
+		 		  fulldayhr=0;
+		 		 System.out.println("Employee Hour:"+ fulldayhr);
 		 	  }
-	   empwage = emphrs*wageperhr;
+	   empwage = fulldayhr*wageperhr;
 	   System.out.println("Daily Employee Wages:"+empwage);
    }
 	public static void main(String[] args) {
