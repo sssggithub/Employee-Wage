@@ -1,17 +1,19 @@
 package EmpWage;
 
 public class Employee_wage {
-	static final int Fulltime =1;
-	static final int Parttime=2;
+	 static final int Fulltime =1;
+	 static final int Parttime=2;
 	 static final int wageperhr=20;
-	 public static final int workingday=20;
+	 static final int workingday=20;
+     static final int hrsinmonth=100;	 
+     public static int switch_case() {
       int fulldayhr;
       int empwage;
       int totalempwage;
-      
-  
-   public void switch_case() {
-	   for(int day=0;day<workingday;day++) {
+      int totalemphrs=0;
+	  int totalworkingdays=0;
+      while(totalemphrs<=hrsinmonth && totalworkingdays<workingday) {
+	    	 totalworkingdays++; 
 		      double empcheck =(int)(Math.random()*3);
 		   
 	   switch((int)empcheck) {
@@ -24,17 +26,17 @@ public class Employee_wage {
 	    	  default:
 	    		  fulldayhr=0;
 	    	  }
-		empwage = fulldayhr*wageperhr;
-		totalempwage+=empwage;
-		System.out.println("Emp wage: "+empwage);
+	   totalemphrs+=fulldayhr;
+		System.out.println("day: "+totalworkingdays + "emp hrs :"+fulldayhr);
 	   }
-	   System.out.println(" Total Emp wage: "+totalempwage);
+      totalempwage=totalemphrs*wageperhr;
+	     System.out.println("Total Employee Wage:"+totalempwage);
+	     return totalempwage;
    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 System.out.println("Welcome to Employee Wage Computation Program");
-Employee_wage emp=new Employee_wage();
-emp.switch_case();
+switch_case();
 	}
 }
 
