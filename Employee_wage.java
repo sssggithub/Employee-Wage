@@ -2,11 +2,8 @@ package EmpWage;
 
 public class Employee_wage {
 	 static final int Fulltime =1;
-	 static final int Parttime=2;
-	 static final int wageperhr=20;
-	 static final int workingday=20;
-     static final int hrsinmonth=100;	 
-     public static int switch_case() {
+	 static final int Parttime=2; 
+     public static int Empwage(String company,int wageperhr,int workingday,int hrsinmonth)  {
       int fulldayhr;
       int empwage;
       int totalempwage;
@@ -30,13 +27,14 @@ public class Employee_wage {
 		System.out.println("day: "+totalworkingdays + "emp hrs :"+fulldayhr);
 	   }
       totalempwage=totalemphrs*wageperhr;
-	     System.out.println("Total Employee Wage:"+totalempwage);
+      System.out.println("Total Employee Wage For Company:" +company +" "+"is:" +totalempwage);
 	     return totalempwage;
    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 System.out.println("Welcome to Employee Wage Computation Program");
-switch_case();
+Empwage("Infosys", 20, 20, 100);
+Empwage("Wipro", 50, 30, 200);
 	}
 }
 
